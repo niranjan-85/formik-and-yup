@@ -29,6 +29,123 @@ const Address = () => {
       >
         {(formik) => (
           <div className="new-section ">
+            {console.log(formik.errors)}
+
+
+
+
+
+            <div className="container mt-5">
+                <div className="row">
+                  <div className="col">
+                    <TextBox
+                      type="number"
+                      placeholder="Pincode *"
+                      disabled = {true}
+                    />
+
+                  </div>
+                  <div className="col">
+                    <Dropdown
+                      type="text"
+                      placeholder="Country"
+                      disabled = {true}
+                    />
+                  </div>
+                  <div className="col">
+                    <TextBox
+                      type="text"
+                      placeholder="State *"
+                      disabled = {true}
+
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col">
+                    <Dropdown
+                      placeholder="District"
+                      disabled = {true}
+                    />
+                  </div>
+                  <div className="col">
+                    <Dropdown
+                      placeholder="City"
+                      disabled = {true}
+                    />
+                  </div>
+                  <div className="col">
+                    <TextBox
+                      placeholder="Area/Locality"
+                      disabled = {true}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col">
+                    <TextBox
+                      type="text"
+                      placeholder="Building Number *"
+                      disabled = {true}
+                    />
+
+                  </div>
+                  <div className="col">
+                    <TextBox
+                      type="text"
+                      placeholder="Building Name *"
+                      disabled = {true}
+                    />
+
+                  </div>
+                  <div className="col">
+                    <TextBox
+                      type="text"
+                      placeholder="Landmark"
+                      disabled = {true}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col">
+                    <TextBox
+                      type="text"
+                      placeholder="State *"
+                      disabled = {true}
+
+                    />
+
+                  </div>
+                  <div className="col">
+                    <Dropdown
+                      placeholder="Circle"
+                      disabled = {true}
+                    />
+                  </div>
+                  <div className="col">
+                    <Dropdown
+                      placeholder="Jio Center"
+                      name="jioCenter"
+                      disabled = {true}
+                    />
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <Form onSubmit={formik.handleSubmit}>
               <div className="container mt-5">
                 <div className="row">

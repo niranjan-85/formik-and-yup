@@ -18,7 +18,9 @@ export const detailSchema = Yup.object({
     .test({
         name:"FILE_FORMAT",
         test(value,ctx){
-            console.log(value)
+            if(!value){
+                return ctx.createError({ message: 'Cannot Be empty' });
+            }
             if(value.size > 2000000){            
                 return ctx.createError({ message: 'File Size Limit : 2MB' });
             }
@@ -28,14 +30,5 @@ export const detailSchema = Yup.object({
             return true;
         }
     }),
-    crfFile:Yup
-        .mixed()
-        .nullable()
-        .required()
-        .test(
-            "FILE_SIZE",
-            "Error",
-            (value)=> !value || (value && value.size <= 2000000)
-        )
         
 })
